@@ -16,13 +16,12 @@ const TEXT_FIELDS = [
     "text",
     "time",
     "url",
-    "week",
-    "textarea"
+    "week"
 ];
 
 
 function elementIsTextField(element) {
-    return TEXT_FIELDS.indexOf(element.props.type) > -1 || TEXT_FIELDS.indexOf(element.type) > -1;
+    return TEXT_FIELDS.indexOf(element.props.type) > -1 || element.type === 'textarea';
 }
 
 function elementIsRadioField(element) {
