@@ -22,7 +22,7 @@ const TEXT_FIELDS = [
 
 
 function elementIsTextField(element) {
-    return TEXT_FIELDS.indexOf(element.props.type) > -1;
+    return TEXT_FIELDS.indexOf(element.props.type) > -1 || TEXT_FIELDS.indexOf(element.type) > -1;
 }
 
 function elementIsRadioField(element) {
@@ -161,6 +161,7 @@ export function addPropsToChildren(children, state, handles) {
                 };
                 return cloneElement(child, props);
             }
+
         } 
 
 
